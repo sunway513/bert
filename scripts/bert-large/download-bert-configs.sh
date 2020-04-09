@@ -1,5 +1,6 @@
 #!/bin/bash
 DUMP_DIR=/tmp
+cd ../..
 
 # download bert base
 MODEL_NAME=bert_base

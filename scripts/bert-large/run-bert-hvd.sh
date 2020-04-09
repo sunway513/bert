@@ -9,6 +9,8 @@ MODEL_NAME=${MODEL_NAME:-bert_large}
 # remove the previous checkpoints
 rm -rf /tmp/pretraining_output/*
 
+cd ../..
+
 mpirun -np ${NUM_GPUS} \
     -H localhost:${NUM_GPUS} \
     -bind-to none -map-by slot \
