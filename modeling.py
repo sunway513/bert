@@ -272,12 +272,9 @@ def gelu(x):
   Returns:
     `x` with the GELU activation applied.
   """
-  try:
-    return tf.nn.gelu(x)
-  except:
-    cdf = 0.5 * (1.0 + tf.tanh(
+  cdf = 0.5 * (1.0 + tf.tanh(
       (np.sqrt(2 / np.pi) * (x + 0.044715 * tf.pow(x, 3)))))
-    return x * cdf
+  return x * cdf
 
 
 def get_activation(activation_string):
