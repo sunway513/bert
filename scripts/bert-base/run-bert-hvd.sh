@@ -23,7 +23,7 @@ mpirun -np ${NUM_GPUS} \
     --do_eval=False \
     --use_horovod=True \
     --bert_config_file=./configs/${MODEL_NAME}/bert_config.json \
-    --train_batch_size=28 \
+    --train_batch_size=20 \
     --max_seq_length=512 \
     --max_predictions_per_seq=20 \
     --num_train_steps=$((20*NUM_GPUS)) \
